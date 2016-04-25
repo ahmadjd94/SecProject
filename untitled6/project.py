@@ -109,8 +109,8 @@ class Ui_MainWindow(object):
         self.menuBar.addAction(self.menuAbout.menuAction())
         self.radioButton_5.clicked.connect(self.loadFile)
         self.radioButton_6.clicked.connect(self.loadText)
-        self.pushButton.clicked.connect(self.PARTY)
-        self.pushButton_3.clicked.connect(self.PARTY2)
+        self.pushButton.clicked.connect(self.Hash)
+        self.pushButton_3.clicked.connect(self.Enc)
         self.radioButton_7.clicked.connect(self.switch)
         self.radioButton_8.clicked.connect(self.switch1)
         self.message=QtWidgets.QMessageBox()
@@ -129,7 +129,7 @@ class Ui_MainWindow(object):
         self.lineEdit.setDisabled(True)
         self.textEdit.setDisabled(False)
 
-    def PARTY2(self):
+    def Enc(self):
 
         key=self.lineEdit_4.text().upper()
 
@@ -173,9 +173,6 @@ class Ui_MainWindow(object):
             self.lineEdit_3.setText(CLEAR)
 
 
-
-
-
     def retranslateUi(self, MainWindow):                                     # pyuic cenerated code
 
         _translate = QtCore.QCoreApplication.translate
@@ -201,7 +198,7 @@ class Ui_MainWindow(object):
         self.actionSave.setText(_translate("MainWindow", "save"))
         self.message.setGeometry(500,500,800,400)
 
-    def PARTY (self):                        #modern hashing algortihms tab
+    def Hash (self):                        #modern hashing algortihms tab
         text=""
         working=False
         if self.radioButton_5.isChecked():
